@@ -12,8 +12,7 @@ for i in range(1000):
 	res = scraper.get(url)
 	if (res.text.startswith("{") and res.text.endswith("}")) or res.status_code == 201:
 		res_json = json.loads(res.text)
-		print(res_json)
-		print("POP :O : " + res_json["Token"])
+		print("POP :O : " + res_json["Token"][0:10])
 		token = res_json["Token"]
 	else:
 		pass
