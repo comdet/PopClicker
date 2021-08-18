@@ -6,5 +6,5 @@ while True:
 	res = requests.post("https://api.prayut.click/clicks", json = data,verify=False)
 	if res.status_code == 200:
 		res_data = json.loads(res.text)
-		print(f"clicks : {res_data['total']}")
+		print(f"OK : total clicks : {res_data['total']}")
 		time.sleep(10)
